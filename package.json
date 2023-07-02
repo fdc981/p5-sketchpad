@@ -9,6 +9,7 @@
   "author": "fdc981",
   "license": "ISC",
   "dependencies": {
+    "p5": "^1.6.0",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
   }
