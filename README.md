@@ -1,6 +1,6 @@
 # p5-sketchpad
 
-A sketchpad for p5, enabling creation of sketches within a text editor with live preview provided by webpack's Hot Module Replacement.
+A sketchpad for p5, enabling creation of fullscreen sketches within a text editor with live preview provided by webpack's Live Reload.
 
 ## Installation 
 
