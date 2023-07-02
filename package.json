@@ -1,0 +1,11 @@
+{
+  "name": "p5-sketchpad",
+  "version": "1.0.0",
+  "description": "Sketchpad for p5.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fdc981",
+  "license": "ISC"
+}
