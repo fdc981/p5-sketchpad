@@ -7,6 +7,9 @@ module.exports = {
       import: './src/example-global.p5.js',
     },
   },
+  performance: {
+    hints: false
+  },
   mode: "production",
   devServer: {
     static: './dist',
