@@ -4,14 +4,14 @@ let sketch = function(p) {
   let x = 100;
   let y = 100;
 
-  function setup() {
-    createCanvas(700, 410);
+  p.setup = function() {
+    p.createCanvas(700, 410);
   }
 
-  function draw() {
-    background(0);
-    fill(255);
-    rect(x, y, 100, 100);
+  p.draw = function() {
+    p.background(0);
+    p.fill(255);
+    p.rect(x, y, 100, 100);
   }
 }
 
