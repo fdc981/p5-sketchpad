@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     sketch: {
-      import: './src/example-global.p5.js',
+      import: './src/sketch.p5.js',
     },
   },
   performance: {
