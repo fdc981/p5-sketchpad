@@ -1,0 +1,27 @@
+diff --git a/node_modules/p5-global2instance/index.js b/node_modules/p5-global2instance/index.js
+index ba88873..1f83a14 100644
+--- a/node_modules/p5-global2instance/index.js
++++ b/node_modules/p5-global2instance/index.js
+@@ -50,9 +50,13 @@ const wrapP5Funcs = ASTs => ASTs.map(wrapP5Func)
+ module.exports = function (sourceCode, options = opts) {
+   instance = options.instance
+   const templateCode = `
+-  export default function (${instance}) {
++  import p5 from 'p5';
++
++  let sketch = function(${instance}) {
+     %= p5Main %
+-  }
++  };
++
++  let myp5 = new p5(sketch);
+   `
+ 
+   // https://github.com/estools/estemplate#advanced-generation-with-source-map
+@@ -66,6 +70,5 @@ module.exports = function (sourceCode, options = opts) {
+   })
+ 
+   let output = escodegen.generate(ast, options.escodegen).code
+-  if (output.includes('p5.')) output = `import p5 from 'p5'\n${output}`
+   return output
+ }
