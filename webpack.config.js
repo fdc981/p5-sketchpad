@@ -5,9 +5,7 @@ module.exports = {
   entry: {
     sketch: {
       import: './src/example-global.p5.js',
-      dependOn: 'p5',
     },
-    p5: 'p5'
   },
   mode: "production",
   devServer: {
@@ -38,6 +36,15 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: 'single',
-    minimize: false
+    minimize: false,
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
   },
 }
