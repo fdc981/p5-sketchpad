@@ -25,3 +25,15 @@ index ba88873..1f83a14 100644
 -  if (output.includes('p5.')) output = `import p5 from 'p5'\n${output}`
    return output
  }
+diff --git a/node_modules/p5-global2instance/list-p5func.js b/node_modules/p5-global2instance/list-p5func.js
+index 13fb75d..e2a7b11 100644
+--- a/node_modules/p5-global2instance/list-p5func.js
++++ b/node_modules/p5-global2instance/list-p5func.js
+@@ -27,6 +27,7 @@ const p5callFuncs = [
+   'resizeCanvas',
+   'noCanvas',
+   'blendMode',
++  'describe',
+ 
+   // Color.Settings
+   'background',
