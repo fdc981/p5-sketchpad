@@ -29,7 +29,7 @@ function draw() {
 To view the sketch, first run
 
 ``` sh
-npm webpack
+npx webpack
 ```
 
 Then, the HTML file displaying the sketch is `dist/index.html`; you can open it with a web browser to display it.
@@ -39,7 +39,7 @@ Then, the HTML file displaying the sketch is `dist/index.html`; you can open it 
 You can specify the sketch you want to preview. For example, if `src/anotherSketch.p5.js` was to be previewed:
 
 ``` sh
-npm webpack --env sketch=anotherSketch
+npx webpack --env sketch=anotherSketch
 ```
 
 ## Live preview
