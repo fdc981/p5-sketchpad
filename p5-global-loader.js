@@ -15,10 +15,11 @@ function p5Global2InstanceLoader(content, map, meta) {
 /**
  * Converts a p5 script in global mode to instance mode crudely.
  *
- * Since this function replaces substrings matching p5 globals, the input
- * should be carefully checked beforehand.
+ * Since this function replaces words matching p5 globals, the input should be
+ * carefully checked beforehand.
  *
- * @param {string|Buffer} content Content of the resource file containing p5 data.
+ * @param {string|Buffer} content Content of the resource file containing p5
+ *                                data.
  * @param {object} [map] Unused.
  * @param {any} [meta] Unused.
  */
@@ -29,10 +30,9 @@ function crudeLoader(content, map, meta) {
   }
 
   for (let expr of p5func['p5exprs']) {
-    content = content.replaceAll(new RegExp("(?<!\$\_p\.)" + expr, "g"),
+    content = content.replaceAll(new RegExp("(?<!\\$_p\\.|[a-zA-Z])" + expr + "(?![a-zA-Z]+)", "g"),
                                  "$_p." + expr);
   }
-  content = content.replaceAll(new RegExp("(\\$_p\\.)+", "g"), "$_p.");
 
   content = `
   import p5 from 'p5';
