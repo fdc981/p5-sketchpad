@@ -34,7 +34,7 @@ function crudeLoader(content, map, meta) {
                                  "$_p." + expr);
   }
 
-  content = `
+  content = `__webpack_nonce__ = 'c29tZSBjb29sIHN0cmluZyB3aWxsIHBvcCB1cCAxMjM=';
   import p5 from 'p5';
 
   let sketch = function($_p) {
