@@ -17,11 +17,13 @@ You can create a sketch within `src/sketch.p5.js`. This sketch should contain p5
 
 function setup() {
   createCanvas(200, 200);
+  background(0);
   
   noLoop();
 }
 
 function draw() {
+  fill(255);
   rect(10, 10, 30, 30);
 }
 ```
