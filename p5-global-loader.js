@@ -30,7 +30,7 @@ function crudeLoader(content, map, meta) {
   }
 
   for (let expr of p5func['p5exprs']) {
-    content = content.replaceAll(new RegExp("(?<!\\$_p\\.|[a-zA-Z])" + expr + "(?![a-zA-Z]+)", "g"),
+    content = content.replaceAll(new RegExp("(?<!\\$_p\\.|[a-zA-Z\\.])" + expr + "(?![a-zA-Z]+)", "g"),
                                  "$_p." + expr);
   }
 
