@@ -27,7 +27,7 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test: /\.p5.js$/,
+          test: /\.p5\.js$/,
           use: [
             {
               loader: path.resolve('p5-global-loader.js')
