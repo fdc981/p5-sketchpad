@@ -26,7 +26,7 @@ index ba88873..1f83a14 100644
    return output
  }
 diff --git a/node_modules/p5-global2instance/list-p5func.js b/node_modules/p5-global2instance/list-p5func.js
-index 13fb75d..b01fdca 100644
+index 13fb75d..8ed0ff0 100644
 --- a/node_modules/p5-global2instance/list-p5func.js
 +++ b/node_modules/p5-global2instance/list-p5func.js
 @@ -27,6 +27,7 @@ const p5callFuncs = [
@@ -37,15 +37,24 @@ index 13fb75d..b01fdca 100644
  
    // Color.Settings
    'background',
-@@ -276,6 +277,7 @@ const p5vars = [
+@@ -59,6 +60,7 @@ const p5callFuncs = [
+ 
+   // Shape.2D_Primitives
+   'arc',
++  'circle',
+   'ellipse',
+   'line',
+   'point',
+@@ -276,6 +278,8 @@ const p5vars = [
    'QUARTER_PI',
    'TAU',
    'TWO_PI',
 +  'CLOSE',
++  'WEBGL',
  
    // Environment
    'frameCount',
-@@ -286,6 +288,7 @@ const p5vars = [
+@@ -286,6 +290,7 @@ const p5vars = [
    'windowHeight',
    'width',
    'height',
