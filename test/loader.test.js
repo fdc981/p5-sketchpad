@@ -10,7 +10,7 @@ import { getModuleSource, getWarnings, getErrors } from './helpers';
 
 
 test('converts a simple global-mode p5.js sketch', async () => {
-  const stats = await compiler('./example.p5.js');
+  const stats = await compiler('./fixtures/example.p5.js');
 
   expect(getModuleSource(stats)).toMatchSnapshot("result");
   expect(getWarnings(stats)).toHaveLength(0);
