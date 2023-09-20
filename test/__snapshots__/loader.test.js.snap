@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`converts a global-mode sketch containing a function definition: result 1`] = `
+"__webpack_nonce__ = 'c29tZSBjb29sIHN0cmluZyB3aWxsIHBvcCB1cCAxMjM=';
+  import p5 from 'p5';
+
+  let sketch = function($_p) {
+    /**
+ * Draws a polygon centered at x, y, with given radius and number of sides
+ * numSides.
+ */
+function polygon(x, y, radius, numSides) {
+  $_p.beginShape();
+  for (let i = 0; i < numSides; i++) {
+    $_p.vertex(x + radius * Math.cos(2 * Math.PI / numSides * i),
+           y + radius * Math.sin(2 * Math.PI / numSides * i));
+  }
+  $_p.endShape($_p.CLOSE);
+}
+
+$_p.setup = function() {
+  $_p.createCanvas(200, 200);
+  $_p.noLoop();
+}
+
+$_p.draw = function() {
+  polygon(100, 100, 40, 5);
+}
+
+  }
+
+  let myp5 = new p5(sketch);
+  "
+`;
+
+exports[`converts a simple global-mode p5.js sketch: result 1`] = `
+"__webpack_nonce__ = 'c29tZSBjb29sIHN0cmluZyB3aWxsIHBvcCB1cCAxMjM=';
+  import p5 from 'p5';
+
+  let sketch = function($_p) {
+    $_p.setup = function() {
+  $_p.createCanvas(200, 200);
+  $_p.noLoop();
+}
+
+$_p.draw = function() {
+  $_p.stroke("black");
+  $_p.fill("black");
+  $_p.circle(50, 50, 50);
+}
+
+  }
+
+  let myp5 = new p5(sketch);
+  "
+`;
