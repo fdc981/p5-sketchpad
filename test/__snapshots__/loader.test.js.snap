@@ -1,5 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`converts a global-mode sketch containing a class: result 1`] = `
+"__webpack_nonce__ = 'c29tZSBjb29sIHN0cmluZyB3aWxsIHBvcCB1cCAxMjM=';
+  import p5 from 'p5';
+
+  let sketch = function($_p) {
+    class GlowBox {
+  posX;
+  posY;
+  boxWidth;
+  boxHeight;
+  glowAmount;
+
+  constructor(posX, posY, boxWidth, boxHeight, glowAmount) {
+    this.posX = posX;
+    this.posY = posY;
+    this.boxWidth = boxWidth;
+    this.boxHeight = boxHeight;
+    this.glowAmount = glowAmount;
+  }
+
+  display() {
+    $_p.drawingContext.shadowColor = "white";
+    $_p.drawingContext.shadowBlur = this.glowAmount;
+    $_p.drawingContext.fillRect(this.posX,
+                            this.posY,
+                            this.boxWidth,
+                            this.boxHeight);
+  }
+}
+
+$_p.setup = function() {
+  $_p.createCanvas(innerWidth, innerHeight);
+  $_p.background("black");
+  $_p.noLoop();
+}
+
+$_p.draw = function() {
+  $_p.stroke("white");
+  $_p.fill("white");
+
+  let gbox = new GlowBox($_p.width / 2 - 25, $_p.height / 2 - 25,
+                         50, 50,
+                         10);
+  gbox.display();
+}
+
+  }
+
+  let myp5 = new p5(sketch);
+  "
+`;
+
 exports[`converts a global-mode sketch containing a function definition: result 1`] = `
 "__webpack_nonce__ = 'c29tZSBjb29sIHN0cmluZyB3aWxsIHBvcCB1cCAxMjM=';
   import p5 from 'p5';
